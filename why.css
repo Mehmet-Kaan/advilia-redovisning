@@ -1,0 +1,160 @@
+#varfor {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #fff 0%, var(--primary-color) 100%);
+}
+
+/* .varfor-bg {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 1500px;
+  height: 1060px;
+  max-height: 120%;
+  z-index: 0;
+  opacity: 0.25;
+  transform: translateX(-50%) rotate(80deg);
+  transform-origin: center;
+} */
+
+.varfor-bg {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  width: 1500px;
+  height: 1000px;
+  max-height: 120%;
+  z-index: 0;
+  opacity: 0.25;
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: center;
+}
+
+.varfor-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.varfor-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#varfor h1 {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 1.2rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(135deg, #95662c, #e7d88b);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+#varfor h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #e7d88b, #95662c);
+  border-radius: 2px;
+}
+.varfor-intro {
+  max-width: 1200px;
+  margin: auto;
+}
+.varfor-intro p {
+  font-size: 1.2rem;
+  margin: 0 auto 1rem auto;
+  color: var(--textBoldColor);
+}
+
+.varfor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0 auto;
+}
+
+.varfor-card {
+  background: var(--boxBackground);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--boxBorder);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.varfor-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dots at the top left of the card */
+/* .varfor-card::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(90deg, #e7d88b, #95662c);
+  border-radius: 50%;
+} */
+
+.varfor-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #e7d88b, #95662c);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.varfor-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: var(--boxHoverBackground);
+}
+
+.varfor-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #e7d88b, #95662c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.varfor-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.varfor-card li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.varfor-card li:last-child {
+  border-bottom: none;
+}

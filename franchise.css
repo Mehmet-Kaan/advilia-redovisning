@@ -1,0 +1,222 @@
+#franchise {
+  padding: 6rem 2rem;
+  background: linear-gradient(45deg, #fff 0%, #ffe5b4 100%);
+  text-align: center;
+}
+/* Franchise Title */
+/* .franchiseTitle {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(135deg, #95662c, #e7d88b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block;
+  margin-inline: auto;
+  max-width: 750px;
+} */
+
+.franchiseTitle {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(135deg, #95662c, #e7d88b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+
+.franchiseTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #e7d88b, #95662c);
+  border-radius: 2px;
+}
+
+/* Franchise Subtitle */
+.franchiseSubtitle {
+  font-size: 1.2rem;
+  margin: 0 auto 1rem auto;
+  color: var(--textBoldColor);
+  font-weight: bold;
+}
+.franchiseIntro {
+  font-size: 1.2rem;
+  margin: 0 auto 1rem auto;
+  color: var(--textBoldColor);
+}
+
+.cta-button.convertedBtn {
+  /* background: rgba(109, 109, 109, 0.31); */
+  color: white;
+  background: #ac8647;
+  font-weight: bold;
+  margin: unset;
+  margin-top: 2rem;
+}
+
+.cta-button.convertedBtn:hover {
+  color: #312e2a;
+  background: #f5ecdb;
+}
+
+.franchise-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.franchise-box {
+  background: var(--boxBackground);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.franchise-box.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.franchise-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(231, 216, 139, 0.6);
+  background: var(--boxHoverBackground);
+}
+
+.franchise-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #e7d88b, #95662c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.franchise-box p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.wave-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+#tjanster-wave .wave {
+  position: absolute;
+  width: 200%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: waveMove 100s linear infinite;
+}
+
+#franchise-wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.franchise-content {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #0a0d15;
+}
+.franchise-bg {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  width: 120%;
+  height: 80%;
+  z-index: -1;
+  transform: rotate(-17deg);
+  transform-origin: left center;
+  opacity: 0.25;
+}
+.franchise-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1300px) {
+  .franchise-content {
+    padding: 6rem 2rem;
+  }
+  #tjanster-wave .wave {
+    width: 500%;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .franchise-bg {
+    top: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .franchise-box {
+    padding: 2rem 1.5rem;
+  }
+  .franchise-bg {
+    top: 5%;
+    transform: rotate(-30deg);
+  }
+
+  .cta-button.convertedBtn {
+    color: white;
+    background: #ac8647;
+  }
+}
+
+@media (max-width: 600px) {
+  #franchise h2 {
+    font-size: 2rem;
+  }
+
+  .franchise-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .franchise-box p {
+    font-size: 0.95rem;
+  }
+}

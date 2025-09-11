@@ -1,0 +1,122 @@
+#hem {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://impro.usercontent.one/appid/oneComWsb/domain/adviliaredovisning.com/media/adviliaredovisning.com/onewebmedia/unsplash_OqxPH8c1UFE___serialized1.jpg?etag=%221629479-6735e3f9%22&sourceContentType=image%2Fpng&quality=85&progressive");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transform: skewY(-7deg);
+  z-index: 1;
+}
+
+#hero-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: #e7d88b;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.landing-content p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* .cta-button {
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  background: #e7d88b;
+  color: #000;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: #95662c;
+} */
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgba(225, 203, 161, 0.35);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+/* Icon styling */
+.cta-button i {
+  font-size: 1rem;
+  margin-right: 7.5px;
+}
+
+@media (max-width: 768px) {
+  .landing-content {
+    padding: 1rem;
+  }
+
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

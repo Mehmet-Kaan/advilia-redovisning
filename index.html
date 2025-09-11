@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="franchise.css" />
+    <link rel="stylesheet" href="why.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>Advilia Redovisning AB</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="#hem" class="nav-title">Advilia Redovisning AB</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#hem" class="active">Hem</a>
+          <a href="#tjanster-wave">Tjänster</a>
+          <a href="#franchise-wave">Franchise</a>
+          <a href="#varfor">Varför oss</a>
+          <a href="#contact">Kontakt</a>
+        </div>
+        <div class="burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-links-mobile" id="navLinksMobile">
+      <div class="nav-links-blur" id="navlinksBlur"></div>
+      <a href="#hem" class="active">Hem</a>
+      <a href="#tjanster-wave">Tjänster</a>
+      <a href="#franchise-wave">Franchise</a>
+      <a href="#varfor">Varför oss</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+
+    <section id="hem">
+      <canvas id="hero-dots"></canvas>
+      <div class="landing-content">
+        <h1>Välkommen till Advilia Redovisning AB</h1>
+        <p>
+          Din pålitliga partner för finansiell konsultation. Vi erbjuder
+          skräddarsydda redovisningstjänster för att underlätta din ekonomi och
+          affärsverksamhet.
+        </p>
+        <a
+          href="#bookConsultationHref"
+          class="cta-button"
+          id="bookConsultationBtn"
+          ><i class="fas fa-paper-plane"></i> Boka en konsultation</a
+        >
+      </div>
+    </section>
+
+    <section id="tjanster-wave">
+      <svg
+        class="wave upside-down"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#f7c873" />
+          </linearGradient>
+        </defs>
+        <path
+          fill="url(#waveGradient)"
+          fill-opacity="0.8"
+          d="M0,64L48,85.3C96,107,192,149,288,176C384,203,480,213,576,197.3C672,181,768,139,864,138.7C960,139,1056,181,1152,202.7C1248,224,1344,224,1392,224L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
+
+      <div class="wave-content">
+        <div class="serviceTitleBox">
+          <h2 class="serviceTitle">Våra Tjänster & Lösningar</h2>
+          <h3 class="serviceSubtitle">Få full kontroll över din ekonomi</h3>
+          <p class="serviceIntro">
+            Vi erbjuder kompletta lösningar för bokföring, lönehantering och
+            rådgivning som gör att du kan fokusera på att växa ditt företag
+            istället för att fastna i pappersarbete.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Starta företag</h3>
+            <p>Hjälper dig att starta ett företag med erfarenhet!</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-coins"></i></div>
+            <h3>Redovisning</h3>
+            <p>Bokföring, periodrapporter och rådgivning.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+            <h3>Löner</h3>
+            <p>Lönehantering, semester, traktamenten och utbetalningar.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <h3>Bokslut</h3>
+            <p>Vi sammanställer företagets bokslut korrekt och i tid.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Deklarationer</h3>
+            <p>
+              Vi hjälper dig med alla typer av deklarationer och skattedokument.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3>Skatterådgivning</h3>
+            <p>
+              Vi erbjuder expertrådgivning för att optimera skatter och avdrag.
+            </p>
+          </div>
+        </div>
+
+        <div class="serviceTitleBox">
+          <h3 class="serviceSubtitle">Från Plan till Framgång</h3>
+          <p class="serviceIntro">
+            Med rätt strategi blir din resa enklare. Vi hjälper dig med
+            affärsplaner, budgetering, samt rådgivning inför köp eller
+            försäljning av företag. Tillsammans hittar vi vägen till en lönsam
+            framtid.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Affärsplan</h3>
+            <p>Planering och strategi för att skapa en lönsam affärsplan.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Rådgivning</h3>
+            <p>
+              Personlig rådgivning för ekonomiska beslut och företagstillväxt.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
+            <h3>Budget</h3>
+            <p>
+              Vi hjälper dig sätta upp budgetar för att hålla koll på kostnader
+              och intäkter.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+            <h3>Investerings affärsplan</h3>
+            <p>Utforma planer för investeringar och finansiell tillväxt.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Företagsförsäljning</h3>
+            <p>Stöd vid försäljning av företag med rådgivning och planering.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3>Företagsinköp</h3>
+            <p>
+              Hjälp med att köpa företag och ta kontroll över en framgångsrik
+              verksamhet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="franchise-wave">
+      <div class="franchise-bg">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <defs>
+            <linearGradient
+              id="franchiseGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#f7c873" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#varforGradient)"
+            d="M0,160 
+               C360,0 1080,0 1440,160 
+               C1080,320 360,320 0,160 
+               Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="wave-container">
+        <div class="franchise-content">
+          <div class="franchiseTitleBox">
+            <h2 class="franchiseTitle">Franchise</h2>
+            <p class="franchiseSubtitle">
+              Ett färdigt koncept för snabbare tillväxt
+            </p>
+            <p class="franchiseIntro">
+              Är du redo att ta din karriär inom redovisning till nästa nivå?
+              Advilia Redovisning erbjuder en unik möjlighet för dig att bygga
+              och driva din egen framgångsrika redovisningsbyrå. Genom att bli
+              en del av Advilia Redovisning får du tillgång till ett färdigt
+              koncept och hjälp med att hitta nya kunder – något som gör det
+              möjligt för dig att växa mycket snabbare och enklare än om du
+              varit själv.
+            </p>
+            <p class="franchiseIntro">
+              Advilia Redovisning koncept passar både nya och etablerade byråer
+              – det viktiga är att du har kunskap inom redovisning och en vilja
+              att driva en modern, digital byrå.
+            </p>
+            <a href="mailto:asdfg@hotmail.com" class="cta-button convertedBtn"
+              ><i class="fas fa-arrow-right"></i> Anmäl intresse</a
+            >
+          </div>
+
+          <!-- Franchise boxes -->
+          <div class="franchise-boxes">
+            <div class="franchise-box">
+              <h3><i class="fas fa-link"></i> Bli en del av en kedja</h3>
+              <p>
+                Igenkänning är A och O när man väljer något så pass viktigt som
+                en redovisningsbyrå. Advilia Redovisning är lika med kvalitet
+                och pålitlighet. Våra positiva kundrecensioner vittnar om vår
+                höga standard och vårt engagemang för kundnöjdhet. Tillsammans
+                bygger vi vidare på detta starka rykte.
+              </p>
+            </div>
+            <div class="franchise-box">
+              <h3><i class="fas fa-users"></i> Öka din kundbas & lönsamhet</h3>
+              <p>
+                Med vår beprövade affärsmodell och branschledande programvaror
+                kan du snabbt attrahera fler kunder och öka din lönsamhet. Vi
+                erbjuder fasta priser, digital hantering och automatiserade
+                rutiner som gör din byrå effektiv och lönsam.
+              </p>
+            </div>
+            <div class="franchise-box">
+              <h3>
+                <i class="fas fa-shield-alt"></i> Självständighet med starkt
+                stöd
+              </h3>
+              <p>
+                Hos Advilia Redovisning driver du din egen byrå med alla
+                fördelar som kommer med självständighet. Samtidigt får du stöd
+                från en större organisation med centrala samarbeten och avtal
+                som ger dig ytterligare affärsmöjligheter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="varfor">
+      <div class="varfor-bg">
+        <svg
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+          width="100%"
+          height="100%"
+        >
+          <defs>
+            <linearGradient
+              id="varforGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stop-color="rgba(183,183,183,0.6)" />
+              <stop offset="100%" stop-color="rgba(160,160,160,0.8)" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#franchiseGradient)"
+            d="M0,200
+            C360,0 1080,0 1440,200
+            L1440,320
+            L0,320
+            Z"
+          />
+        </svg>
+      </div>
+
+      <div class="varfor-content">
+        <h1>Varför välja oss</h1>
+
+        <div class="varfor-intro">
+          <p style="font-weight: bold">
+            Flexibla redovisningstjänster - skräddarsy efter dina behov
+          </p>
+          <p>
+            Du väljer själv vilka delar av redovisningen som du vill ha hjälp
+            med. Vi kan hantera alla delar av er redovisning och rapportering,
+            med lönehantering som tillval. När ditt företag växer eller
+            förändras så anpassar vi självklart våra tjänster efter just ditt
+            företags aktuella situation.
+          </p>
+        </div>
+        <div class="varfor-cards">
+          <div class="varfor-card">
+            <h2>Bokföring och rapportering</h2>
+            <ul>
+              <li>Bokföring övrigt</li>
+              <li>Periodbokslut</li>
+              <li>Periodrapporter inklusive företagsanalys</li>
+              <li>Rådgivning redovisning</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Lön</h2>
+            <ul>
+              <li>Registrering av avvikelser</li>
+              <li>Lönespecifikation</li>
+              <li>Semester, Milersättning och traktamenten</li>
+              <li>Löneutbetalningar</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Deklaration</h2>
+            <ul>
+              <li>Moms</li>
+              <li>AGI – Arbetsgivardeklaration på individnivå</li>
+              <li>Bolags deklaration</li>
+              <li>Privat deklaration</li>
+              <li>Kontrolluppgifter</li>
+              <li>Rådgivning skatt</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Årstjänster</h2>
+            <ul>
+              <li>Årsbokslut</li>
+              <li>Årsredovisning</li>
+              <li>Års stämmoprotokoll</li>
+              <li>Rapportering/analys</li>
+              <li>Årsboksluts möte</li>
+              <li>Budget</li>
+              <li>Rådgivning redovisning</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Leverantörsfakturor</h2>
+            <ul>
+              <li>
+                Scanning och tolkning av leverantörsfakturor samt kontering via
+                app eller webb
+              </li>
+              <li>Attestflöde av leverantörsfakturor</li>
+              <li>Leverantörsbetalningar</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Kvitton</h2>
+            <ul>
+              <li>Foto av kvitton och kontera via app</li>
+              <li>Attestflöde av kvitton</li>
+              <li>Utbetalning av utlägg</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Kundfakturor</h2>
+            <ul>
+              <li>Fakturering via app eller webb</li>
+              <li>Kundinbetalningar</li>
+              <li>Påminnelsehantering & inkasso</li>
+              <li>Fakturaköp</li>
+            </ul>
+          </div>
+
+          <div class="varfor-card">
+            <h2>Affärsplattformen MyBusiness</h2>
+            <ul>
+              <li>Åtkomst till system för att hantera ditt företags ekonomi</li>
+              <li>Kommunikation med Advilia Team</li>
+              <li>Dokumentarkiv för handlingar kopplat till ditt företag</li>
+              <li>Nyckeltal/Diagram kopplat till ditt företags ekonomi</li>
+              <li>Aktivitetslista med viktiga actions du behöver ta</li>
+              <li>Erbjudande från Advilia`s samarbetspartners</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-container">
+        <div class="contact-intro">
+          <h1>Kontakta Oss</h1>
+          <span id="bookConsultationHref"></span>
+          <p class="contact-info-intro">
+            Välkommen till vårt kontor i hjärtat av Lund. Här möter vi gärna
+            både nya och befintliga kunder för rådgivning och samtal.
+          </p>
+        </div>
+        <div class="map-address">
+          <div class="contact-info">
+            <h2>Besök Oss</h2>
+
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <a
+                  href="https://maps.app.goo.gl/oNB1shv5HwKjcMu1A"
+                  target="_blank"
+                >
+                  Advilia Redovisning AB <br />
+                  Traktorvägen 6 C <br />
+                  22660 Lund, Sweden
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <a href="tel:0464601040">046-460 10 40</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <a href="mailto:info@adviliaredovisning.com">
+                  info@adviliaredovisning.com
+                </a>
+              </div>
+            </div>
+
+            <button id="openFormBtn" class="contact-btn">
+              <i class="fas fa-paper-plane"></i> Skriv oss
+            </button>
+          </div>
+
+          <iframe
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d17979.024365570283!2d13.161865!3d55.717182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653bd771184d2d1%3A0x76237ece9df74c4a!2sTraktorv%C3%A4gen%206c%2C%20226%2060%20Lund%2C%20Sverige!5e0!3m2!1ssv!2sus!4v1757360713065!5m2!1ssv!2sus"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div id="contactModal" class="modal">
+            <span class="close-btn">&times;</span>
+            <form class="contact-form">
+              <!-- <h2>Skriv till Oss</h2> -->
+              <p>
+                Fyll i formuläret nedan så återkommer vi till dig så snart som
+                möjligt. Vi svarar vanligtvis inom 24 timmar.
+              </p>
+              <div class="form-group">
+                <input type="text" required />
+                <label>👤 Namn</label>
+              </div>
+              <div class="form-group">
+                <input type="email" required />
+                <label>📧 E-post</label>
+              </div>
+              <div class="form-group">
+                <input type="text" required />
+                <label>📝 Ämne</label>
+              </div>
+              <div class="form-group">
+                <textarea rows="5" required></textarea>
+                <label>💬 Meddelande</label>
+              </div>
+              <button type="submit">Skicka Meddelande</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Advilia Redovisning AB</h3>
+          <p>
+            Vi hjälper företag att växa med moderna och flexibla
+            redovisningstjänster. Digitalt, effektivt och personligt – alltid
+            med fokus på dig som kund.
+          </p>
+        </div>
+
+        <div class="footer-social">
+          <h4>Följ oss</h4>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.407.593 24 1.324 24H12v-9.294H9.294V11.53H12V9.067c0-2.676 1.634-4.133 4.022-4.133 1.143 0 2.127.085 2.413.123v2.797h-1.655c-1.299 0-1.551.617-1.551 1.522v1.996h3.102l-.404 3.176H15.229V24h7.447c.73 0 1.324-.593 1.324-1.324V1.324C24 .593 23.407 0 22.676 0z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22.23 0H1.77C.792 0 0 .774 0 1.728v20.544C0 23.226.792 24 1.77 24h20.46C23.208 24 24 23.226 24 22.272V1.728C24 .774 23.208 0 22.23 0zM7.12 20.452H3.558V9h3.562v11.452zM5.34 7.663a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM20.452 20.452h-3.562v-5.6c0-1.336-.026-3.057-1.863-3.057-1.864 0-2.15 1.46-2.15 2.967v5.69h-3.562V9h3.421v1.561h.05c.476-.9 1.637-1.847 3.37-1.847 3.6 0 4.265 2.369 4.265 5.452v6.786z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+              class="social-icon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.335 3.608 1.31.975.975 1.248 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.248-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.335-3.608-1.31-.975-.975-1.248-2.242-1.31-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.335-2.633 1.31-3.608C4.518 2.498 5.785 2.225 7.15 2.163 8.416 2.105 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.013 7.052.072 5.76.131 4.642.34 3.678 1.305 2.714 2.27 2.505 3.388 2.446 4.68.013 8.332 0 8.736 0 12c0 3.264.013 3.668.072 4.948.059 1.292.268 2.41 1.232 3.374.964.964 2.082 1.173 3.374 1.232 1.28.059 1.684.072 4.948.072s3.668-.013 4.948-.072c1.292-.059 2.41-.268 3.374-1.232.964-.964 1.173-2.082 1.232-3.374.059-1.28.072-1.684.072-4.948s-.013-3.668-.072-4.948c-.059-1.292-.268-2.41-1.232-3.374C19.41.34 18.292.131 17 .072 15.72.013 15.316 0 12 0z"
+                />
+                <path
+                  d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Hitta oss</h4>
+          <p>
+            <a href="https://maps.app.goo.gl/oNB1shv5HwKjcMu1A" target="_blank">
+              📍 Traktorvägen 6 C, 22660 Lund</a
+            >
+          </p>
+          <p>
+            <a href="tel:0464601040">☎️ 046-460 10 40</a>
+          </p>
+          <p>
+            <a href="mailto:info@adviliaredovisning.com">
+              ✉️ info@adviliaredovisning.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Star Pack Aps - Mehmet Kaan Taspunar || All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    // Change navbar background on scroll
+    const navbar = document.querySelector("nav");
+    const navLinksContainer = document.getElementById("navLinksMobile");
+    const navLinksBlur = document.getElementById("navlinksBlur");
+
+    function updateNavbarOnScroll() {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+        navLinksContainer.classList.add("roundyCorner");
+        navLinksBlur.classList.add("roundyCorner");
+      } else {
+        navbar.classList.remove("scrolled");
+        navLinksContainer.classList.remove("roundyCorner");
+        navLinksBlur.classList.remove("roundyCorner");
+      }
+    }
+
+    // Run once when the page loads
+    document.addEventListener("DOMContentLoaded", updateNavbarOnScroll);
+
+    // Run every time the user scrolls
+    window.addEventListener("scroll", updateNavbarOnScroll);
+
+    // Get all section IDs and navbar links
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinksMobile = document.querySelectorAll(".nav-links-mobile a");
+
+    const burger = document.getElementById("burger");
+
+    window.addEventListener("scroll", () => {
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 70;
+        if (scrollY >= sectionTop) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+        }
+      });
+
+      navLinksMobile.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      navLinksContainer.classList.toggle("show");
+    });
+
+    navLinksContainer.addEventListener("click", () => {
+      burger.classList.remove("active");
+      navLinksContainer.classList.remove("show");
+    });
+
+    // Particle animation for hero section
+    const canvas = document.getElementById("hero-dots");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // Generate particles
+    const particles = [];
+    const colors = ["#fdf5e5", "#ffd700", "#e7d88b", "#0f0e0b"];
+    const maxParticles = 30;
+
+    for (let i = 0; i < maxParticles; i++) {
+      particles.push({
+        x: Math.random() * 50, // start from top-left corner
+        y: Math.random() * 50,
+        radius: Math.random() * 6 + 3,
+        speedX: Math.random() * 1 + 0.5,
+        speedY: Math.random() * 1 + 0.5,
+        alpha: Math.random() * 0.5 + 0.3,
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p) => {
+        const gradient = ctx.createRadialGradient(
+          p.x,
+          p.y,
+          0,
+          p.x,
+          p.y,
+          p.radius
+        );
+        gradient.addColorStop(0, "#fcefd7"); // edge color
+        gradient.addColorStop(1, "#fdf5e5"); // center color
+        // gradient.addColorStop(1, "#95662c");
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.globalAlpha = p.alpha;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#e7d88b";
+        ctx.fill();
+
+        p.x += p.speedX;
+        p.y += p.speedY;
+
+        // Reset when offscreen
+        if (p.x > canvas.width || p.y > canvas.height) {
+          p.x = Math.random() * 50;
+          p.y = Math.random() * 50;
+          p.radius = Math.random() * 6 + 3;
+          p.speedX = Math.random() * 1 + 0.5;
+          p.speedY = Math.random() * 1 + 0.5;
+          p.alpha = Math.random() * 0.5 + 0.3;
+        }
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Generic function to add scroll animation to elements
+    function addScrollAnimation(params) {
+      document.addEventListener("DOMContentLoaded", () => {
+        const boxes = document.querySelectorAll(params);
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target); // trigger only once
+              }
+            });
+          },
+          { threshold: 0.3 }
+        ); // trigger when 20% of card is visible
+
+        boxes.forEach((box, index) => {
+          observer.observe(box);
+        });
+      });
+    }
+
+    addScrollAnimation(".franchise-box");
+    addScrollAnimation(".service-card");
+    addScrollAnimation(".varfor-card");
+
+    // Modal functionality
+    const modal = document.getElementById("contactModal");
+    const bookConsultationBtn = document.getElementById("bookConsultationBtn");
+    const openBtn = document.getElementById("openFormBtn");
+    const closeBtn = document.querySelector(".close-btn");
+
+    bookConsultationBtn.addEventListener("click", () => {
+      modal.style.display = "block";
+      setTimeout(() => modal.classList.add("show"), 500);
+    });
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "block";
+      setTimeout(() => modal.classList.add("show"), 10);
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+      setTimeout(() => (modal.style.display = "none"), 400);
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+        setTimeout(() => (modal.style.display = "none"), 400);
+      }
+    });
+
+    // // Particle animation for hero section const canvas =
+    // document.getElementById("hero-dots"); const ctx = canvas.getContext("2d");
+    // canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+    // window.addEventListener("resize", () => { canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight; }); // Helper function to get a random color
+    // between two hex colors function randomGradientColor(start, end) { // Convert hex
+    // to RGB function hexToRgb(hex) { hex = hex.replace("#", ""); return { r:
+    // parseInt(hex.substring(0, 2), 16), g: parseInt(hex.substring(2, 4), 16), b:
+    // parseInt(hex.substring(4, 6), 16), }; } function rgbToHex(r, g, b) { return (
+    // "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1) ); } const
+    // startRgb = hexToRgb(start); const endRgb = hexToRgb(end); const r = Math.floor(
+    // Math.random() * (endRgb.r - startRgb.r + 1) + startRgb.r ); const g =
+    // Math.floor( Math.random() * (endRgb.g - startRgb.g + 1) + startRgb.g ); const b
+    // = Math.floor( Math.random() * (endRgb.b - startRgb.b + 1) + startRgb.b ); return
+    // rgbToHex(r, g, b); } // Generate particles const particles = []; for (let i = 0;
+    // i < 30; i++) { particles.push({ x: Math.random() * 50, y: Math.random() * 50,
+    // radius: Math.random() * 6 + 3, speedX: Math.random() * 1 + 0.5, speedY:
+    // Math.random() * 1 + 0.5, alpha: Math.random() * 0.5 + 0.3, color:
+    // randomGradientColor("#e7d88b", "#95662c"), }); } function animate() {
+    // ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach((p) => {
+    // ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fillStyle =
+    // p.color; // use gradient color ctx.globalAlpha = p.alpha; ctx.shadowBlur = 10;
+    // ctx.shadowColor = p.color; ctx.fill(); p.x += p.speedX; p.y += p.speedY; if (p.x
+    // > canvas.width || p.y > canvas.height) { p.x = Math.random() * 50; p.y =
+    // Math.random() * 50; p.radius = Math.random() * 6 + 3; p.speedX = Math.random() *
+    // 1 + 0.5; p.speedY = Math.random() * 1 + 0.5; p.alpha = Math.random() * 0.5 +
+    // 0.3; p.color = randomGradientColor("#e7d88b", "#95662c"); } });
+    // requestAnimationFrame(animate); } animate();
+  </script>
+</html>
