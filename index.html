@@ -154,12 +154,6 @@
         </div>
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Affärsplan</h3>
-            <p>Planering och strategi för att skapa en lönsam affärsplan.</p>
-          </div>
-
-          <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-hand-holding-usd"></i>
             </div>
@@ -171,7 +165,7 @@
 
           <div class="service-card">
             <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
-            <h3>Budget</h3>
+            <h3>Budget & Affärsplan</h3>
             <p>
               Vi hjälper dig sätta upp budgetar för att hålla koll på kostnader
               och intäkter.
@@ -182,21 +176,6 @@
             <div class="service-icon"><i class="fas fa-file-contract"></i></div>
             <h3>Investerings affärsplan</h3>
             <p>Utforma planer för investeringar och finansiell tillväxt.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-handshake"></i></div>
-            <h3>Företagsförsäljning</h3>
-            <p>Stöd vid försäljning av företag med rådgivning och planering.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fas fa-building"></i></div>
-            <h3>Företagsinköp</h3>
-            <p>
-              Hjälp med att köpa företag och ta kontroll över en framgångsrik
-              verksamhet.
-            </p>
           </div>
         </div>
       </div>
@@ -490,30 +469,47 @@
           ></iframe>
           <div id="contactModal" class="modal">
             <span class="close-btn">&times;</span>
-            <form class="contact-form">
-              <!-- <h2>Skriv till Oss</h2> -->
+            <form
+              action="https://formspree.io/f/xzzjzrob"
+              method="POST"
+              class="contact-form"
+              id="contactForm"
+            >
               <p>
                 Fyll i formuläret nedan så återkommer vi till dig så snart som
                 möjligt. Vi svarar vanligtvis inom 24 timmar.
               </p>
               <div class="form-group">
-                <input type="text" required />
+                <input type="text" name="name" required />
                 <label>👤 Namn</label>
               </div>
               <div class="form-group">
-                <input type="email" required />
+                <input type="email" name="email" required />
                 <label>📧 E-post</label>
               </div>
               <div class="form-group">
-                <input type="text" required />
+                <input type="text" name="subject" required />
                 <label>📝 Ämne</label>
               </div>
               <div class="form-group">
-                <textarea rows="5" required></textarea>
+                <textarea rows="5" name="message" required></textarea>
                 <label>💬 Meddelande</label>
               </div>
               <button type="submit">Skicka Meddelande</button>
             </form>
+            <div class="loadingBox hide">
+              <span class="loader"></span>
+              <p>Skickar...</p>
+            </div>
+          </div>
+          <!-- <div class="formStatusBox hide">
+            <div id="statusIcon" style="font-size: 3rem; display: none"></div>
+            <p id="formStatus" style="font-size: 2rem; display: none"></p>
+          </div> -->
+
+          <div class="notification hide">
+            <span class="notification-icon" id="statusIcon">✅</span>
+            <p id="formStatus">Email har skickats framgångsrikt!</p>
           </div>
         </div>
       </div>
@@ -810,33 +806,77 @@
       }
     });
 
-    // // Particle animation for hero section const canvas =
-    // document.getElementById("hero-dots"); const ctx = canvas.getContext("2d");
-    // canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-    // window.addEventListener("resize", () => { canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight; }); // Helper function to get a random color
-    // between two hex colors function randomGradientColor(start, end) { // Convert hex
-    // to RGB function hexToRgb(hex) { hex = hex.replace("#", ""); return { r:
-    // parseInt(hex.substring(0, 2), 16), g: parseInt(hex.substring(2, 4), 16), b:
-    // parseInt(hex.substring(4, 6), 16), }; } function rgbToHex(r, g, b) { return (
-    // "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1) ); } const
-    // startRgb = hexToRgb(start); const endRgb = hexToRgb(end); const r = Math.floor(
-    // Math.random() * (endRgb.r - startRgb.r + 1) + startRgb.r ); const g =
-    // Math.floor( Math.random() * (endRgb.g - startRgb.g + 1) + startRgb.g ); const b
-    // = Math.floor( Math.random() * (endRgb.b - startRgb.b + 1) + startRgb.b ); return
-    // rgbToHex(r, g, b); } // Generate particles const particles = []; for (let i = 0;
-    // i < 30; i++) { particles.push({ x: Math.random() * 50, y: Math.random() * 50,
-    // radius: Math.random() * 6 + 3, speedX: Math.random() * 1 + 0.5, speedY:
-    // Math.random() * 1 + 0.5, alpha: Math.random() * 0.5 + 0.3, color:
-    // randomGradientColor("#e7d88b", "#95662c"), }); } function animate() {
-    // ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach((p) => {
-    // ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fillStyle =
-    // p.color; // use gradient color ctx.globalAlpha = p.alpha; ctx.shadowBlur = 10;
-    // ctx.shadowColor = p.color; ctx.fill(); p.x += p.speedX; p.y += p.speedY; if (p.x
-    // > canvas.width || p.y > canvas.height) { p.x = Math.random() * 50; p.y =
-    // Math.random() * 50; p.radius = Math.random() * 6 + 3; p.speedX = Math.random() *
-    // 1 + 0.5; p.speedY = Math.random() * 1 + 0.5; p.alpha = Math.random() * 0.5 +
-    // 0.3; p.color = randomGradientColor("#e7d88b", "#95662c"); } });
-    // requestAnimationFrame(animate); } animate();
+    // Form submission handling
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const statusIcon = document.getElementById("statusIcon");
+    const loadingBox = document.querySelector(".loadingBox");
+    const notificationBox = document.querySelector(".notification");
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+
+      // Reset UI states
+      notificationBox.classList.add("hide");
+      status.style.display = "none";
+      statusIcon.style.display = "none";
+      status.textContent = "";
+
+      // Show loading
+      loadingBox.classList.remove("hide");
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+
+        // Hide loading
+        loadingBox.classList.add("hide");
+
+        // Show status box
+        notificationBox.classList.remove("hide");
+        status.style.display = "block";
+        statusIcon.style.display = "block";
+
+        if (response.ok) {
+          // status.style.color = "#2cf92c";
+          notificationBox.style.boxShadow = "0 3px 11px #2cf92c";
+          statusIcon.textContent = "✅"; // big checkmark
+          status.textContent = "Email har skickats framgångsrikt!";
+          form.reset();
+        } else {
+          // status.style.color = "#950e0e";
+          notificationBox.style.boxShadow = "0 3px 11px #950e0e";
+          statusIcon.textContent = "❌"; // error cross
+          status.textContent = "Något gick fel. Försök igen.";
+        }
+      } catch (error) {
+        // Hide loading
+        loadingBox.classList.add("hide");
+
+        // Show error
+        notificationBox.classList.remove("hide");
+        status.style.display = "block";
+        statusIcon.style.display = "block";
+        status.style.color = "red";
+        statusIcon.textContent = "⚠️"; // warning icon
+        status.textContent = "Nätverksfel. Kontrollera din anslutning.";
+      }
+
+      // Show notification box with animation
+      notificationBox.classList.add("show");
+      closeBtn.click();
+
+      setTimeout(() => {
+        notificationBox.classList.remove("show");
+        setTimeout(() => {
+          notificationBox.classList.add("hide");
+        }, 1500);
+      }, 1500);
+    });
   </script>
 </html>
