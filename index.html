@@ -26,7 +26,9 @@
   <body>
     <nav>
       <div class="nav-container">
-        <a href="#hem" class="nav-title">Advilia Redovisning AB</a>
+        <a href="#hem" class="nav-title">
+          <img id="logo" src="./Assets/logo.png" /> Advilia Redovisning AB</a
+        >
         <div class="nav-links" id="navLinks">
           <a href="#hem" class="active">Hem</a>
           <a href="#tjanster-wave">Tjänster</a>
@@ -524,7 +526,7 @@
           <h4>Följ oss</h4>
           <div class="social-links">
             <a
-              href="https://www.facebook.com"
+              href="https://www.facebook.com/adviliaredovisning"
               target="_blank"
               aria-label="Facebook"
               class="social-icon"
@@ -542,7 +544,7 @@
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/company/adviliaredovisning/"
               target="_blank"
               aria-label="LinkedIn"
               class="social-icon"
@@ -560,7 +562,7 @@
               </svg>
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/adviliaredovisning/"
               target="_blank"
               aria-label="Instagram"
               class="social-icon"
@@ -603,8 +605,8 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2025 Star Pack Aps - Mehmet Kaan Taspunar || All rights
-          reserved.
+          &copy; <span id="currentYear"></span> Star Pack Aps - Mehmet Kaan
+          Taspunar || All rights reserved.
         </p>
       </div>
     </footer>
@@ -804,7 +806,6 @@
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
     const statusIcon = document.getElementById("statusIcon");
-    // const loadingBox = document.querySelector(".loadingBox");
     const notificationBox = document.querySelector(".notification");
     const submitFormBtn = document.getElementById("submitFormBtn");
 
@@ -835,13 +836,11 @@
         statusIcon.style.display = "block";
 
         if (response.ok) {
-          // status.style.color = "#2cf92c";
           notificationBox.style.boxShadow = "0 3px 11px #2cf92c";
           statusIcon.textContent = "✅"; // big checkmark
           status.textContent = "Tack för ditt meddelande! Vi återkommer snart.";
           form.reset();
         } else {
-          // status.style.color = "#950e0e";
           notificationBox.style.boxShadow = "0 3px 11px #950e0e";
           statusIcon.textContent = "❌"; // error cross
           status.textContent = "Något gick fel. Försök igen.";
@@ -867,5 +866,10 @@
         }, 1500);
       }, 1500);
     });
+
+    // Set current year in footer
+    const yearSpan = document.getElementById("currentYear");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
   </script>
 </html>
