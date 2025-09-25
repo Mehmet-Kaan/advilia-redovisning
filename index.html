@@ -495,17 +495,11 @@
                 <textarea rows="5" name="message" required></textarea>
                 <label>💬 Meddelande</label>
               </div>
-              <button type="submit">Skicka Meddelande</button>
+              <button type="submit" id="submitFormBtn">
+                Skicka Meddelande
+              </button>
             </form>
-            <div class="loadingBox hide">
-              <span class="loader"></span>
-              <p>Skickar...</p>
-            </div>
           </div>
-          <!-- <div class="formStatusBox hide">
-            <div id="statusIcon" style="font-size: 3rem; display: none"></div>
-            <p id="formStatus" style="font-size: 2rem; display: none"></p>
-          </div> -->
 
           <div class="notification hide">
             <span class="notification-icon" id="statusIcon">✅</span>
@@ -810,8 +804,9 @@
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
     const statusIcon = document.getElementById("statusIcon");
-    const loadingBox = document.querySelector(".loadingBox");
+    // const loadingBox = document.querySelector(".loadingBox");
     const notificationBox = document.querySelector(".notification");
+    const submitFormBtn = document.getElementById("submitFormBtn");
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
@@ -824,8 +819,8 @@
       statusIcon.style.display = "none";
       status.textContent = "";
 
-      // Show loading
-      loadingBox.classList.remove("hide");
+      submitFormBtn.disabled = true;
+      submitFormBtn.innerHTML = `<span class="loader"></span> Skickar`;
 
       try {
         const response = await fetch(form.action, {
@@ -833,9 +828,6 @@
           body: data,
           headers: { Accept: "application/json" },
         });
-
-        // Hide loading
-        loadingBox.classList.add("hide");
 
         // Show status box
         notificationBox.classList.remove("hide");
@@ -846,7 +838,7 @@
           // status.style.color = "#2cf92c";
           notificationBox.style.boxShadow = "0 3px 11px #2cf92c";
           statusIcon.textContent = "✅"; // big checkmark
-          status.textContent = "Email har skickats framgångsrikt!";
+          status.textContent = "Tack för ditt meddelande! Vi återkommer snart.";
           form.reset();
         } else {
           // status.style.color = "#950e0e";
@@ -855,16 +847,13 @@
           status.textContent = "Något gick fel. Försök igen.";
         }
       } catch (error) {
-        // Hide loading
-        loadingBox.classList.add("hide");
-
         // Show error
-        notificationBox.classList.remove("hide");
-        status.style.display = "block";
-        statusIcon.style.display = "block";
-        status.style.color = "red";
+        notificationBox.style.boxShadow = "0 3px 11px #ffc700";
         statusIcon.textContent = "⚠️"; // warning icon
         status.textContent = "Nätverksfel. Kontrollera din anslutning.";
+      } finally {
+        submitFormBtn.disabled = false;
+        submitFormBtn.innerHTML = "Skicka Meddelande";
       }
 
       // Show notification box with animation
