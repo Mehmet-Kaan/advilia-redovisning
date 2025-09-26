@@ -55,21 +55,6 @@
   margin: 0 auto 2rem auto;
 }
 
-/* .cta-button {
-  padding: 0.8rem 2rem;
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  background: #e7d88b;
-  color: #000;
-  transition: all 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  transform: scale(1.05);
-  background: #95662c;
-} */
-
 .cta-button {
   display: flex;
   align-items: center;

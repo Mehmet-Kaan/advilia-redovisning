@@ -79,13 +79,6 @@ nav.scrolled {
   border-radius: 4px;
 }
 
-/* nav.scrolled .nav-links a:hover,
-nav.scrolled .nav-links-mobile a:hover {
-  background: linear-gradient(90deg, #f2ebcc, #56534e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
 nav.scrolled .nav-links a:hover:not(.active),
 nav.scrolled .nav-links-mobile a:hover:not(.active) {
   -webkit-text-fill-color: unset;

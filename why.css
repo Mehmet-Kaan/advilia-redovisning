@@ -104,18 +104,6 @@
   transform: translateY(0);
 }
 
-/* Dots at the top left of the card */
-/* .varfor-card::before {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(90deg, #e7d88b, #95662c);
-  border-radius: 50%;
-} */
-
 .varfor-card::after {
   content: "";
   position: absolute;
