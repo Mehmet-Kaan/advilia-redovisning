@@ -142,6 +142,11 @@ footer {
   color: #aaa;
 }
 
+.footer-bottom a {
+  text-decoration: none;
+  color: #aaa;
+}
+
 @media (max-width: 768px) {
   .footer {
     display: flex;
