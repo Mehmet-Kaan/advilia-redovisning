@@ -156,6 +156,77 @@
       color: #333;
     }
 
+    /* Cookies setting*/
+    .cookie-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      display: none;
+      z-index: 9999;
+      font-family: Arial, sans-serif;
+      animation: slideUp 0.4s ease-out;
+    }
+
+    .cookie-content p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+      margin: 0 0 1rem 0;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    #cookie-banner .cookie-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 14px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    #cookie-banner .cookie-accept {
+      background: #0077b6; /* nice bluish tone */
+      color: #fff;
+    }
+
+    #cookie-banner .cookie-decline {
+      background: #d62828;
+      color: #fff;
+    }
+
+    #cookie-banner .cookie-preferences {
+      background: #e9ecef;
+      color: #333;
+    }
+
+    #cookie-banner .cookie-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
+    }
+
     /* Navbar styling */
     nav {
       position: fixed;
@@ -2161,6 +2232,29 @@
         </a>
       </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <p>
+          We use essential cookies to make our site work. With your consent, we
+          may also use non-essential cookies to improve user experience and
+          analyze website traffic. By clicking “Accept,” you agree to our
+          website's cookie use as described in our Cookie Policy. You can change
+          your cookie settings at any time by clicking “Preferences.”
+        </p>
+        <div class="cookie-buttons">
+          <button id="cookie-preferences" class="cookie-btn cookie-preferences">
+            Preferences
+          </button>
+          <button id="cookie-decline" class="cookie-btn cookie-decline">
+            Decline
+          </button>
+          <button id="cookie-accept" class="cookie-btn cookie-accept">
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
     // Change navbar background on scroll
@@ -2422,5 +2516,35 @@
     const yearSpan = document.getElementById("currentYear");
     const currentYear = new Date().getFullYear();
     yearSpan.textContent = currentYear;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const banner = document.getElementById("cookie-banner");
+
+      // Check if user already made a choice
+      const cookieChoice = localStorage.getItem("cookie-consent");
+      if (!cookieChoice) {
+        banner.style.display = "block";
+      }
+
+      document.getElementById("cookie-accept").addEventListener("click", () => {
+        localStorage.setItem("cookie-consent", "accepted");
+        banner.style.display = "none";
+      });
+
+      document
+        .getElementById("cookie-decline")
+        .addEventListener("click", () => {
+          localStorage.setItem("cookie-consent", "declined");
+          banner.style.display = "none";
+        });
+
+      // document
+      //   .getElementById("cookie-preferences")
+      //   .addEventListener("click", () => {
+      //     localStorage.setItem("cookie-consent", "preferences");
+      //     banner.style.display = "none";
+      //     alert("Preferences dialog would open here (not implemented yet).");
+      //   });
+    });
   </script>
 </html>
